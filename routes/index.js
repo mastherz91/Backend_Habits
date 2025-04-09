@@ -6,6 +6,12 @@ const { default: mongoose } = require('mongoose');
 
 // Middleware para autenticar token JWT
 const authenticateToken = (req, res, next) => {
+
+  // verificar si la ruta es login
+  if (req.path === '/users/login') {
+    return next();
+  }
+
   const authHeader = req.headers['authorization'];
   const token = authHeader && authHeader.split(' ')[1];
   if (!token) return res.status(401).json({ error: 'Token no proporcionado' });
