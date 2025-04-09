@@ -11,10 +11,5 @@
             "src": "/(.*)",
             "dest": "app.js"
         }
-    ],
-    "env": {
-        "PORT": "5000",
-        "MONGO_URI": "mongodb+srv://mastherz91:123@habitsapp.qpnot.mongodb.net/HabitsDB?retryWrites=true&w=majority&appName=HabitsDB",
-        "JWT_SECRET": "Programacion Avanzada"
-    }
+    ]
 }
